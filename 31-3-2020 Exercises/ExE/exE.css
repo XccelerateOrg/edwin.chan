@@ -1,0 +1,28 @@
+.flexBox{
+    width:500px;
+    display:flex;
+    justify-content: space-between;
+}
+
+.flexBox2{
+    width:500px;
+    display:flex;
+    justify-content: center;
+}
+
+.box{
+    width:100px;
+    height:100px;
+}
+
+#blue{
+    background-color: blue;
+}
+
+#green{
+    background-color: green;
+}
+
+#red{
+    background-color: red;
+}

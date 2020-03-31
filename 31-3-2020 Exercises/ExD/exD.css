@@ -1,0 +1,24 @@
+.bigBox{
+    width:500px;
+    height:500px;
+}
+#blue{
+    float:left; 
+    background-color: blue;
+}
+
+#green{
+    float:right; 
+    background-color: green;
+}
+
+#red{
+    background-color: red;
+    clear:both;
+    margin:auto;
+}
+
+.box{
+    width:100px;
+    height:100px;
+}
