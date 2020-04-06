@@ -80,3 +80,15 @@ h3{
 i{
     font-size: 6em;
 }
+
+.random_pic {
+    height:300px;
+    width:100%;
+}
+
+.bg-transparent{
+    background-color: transparent!important;
+}
+.bg-transparent.scrolled{
+    background-color: darkcyan!important;
+}
