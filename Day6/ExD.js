@@ -11,4 +11,4 @@ function arr(){
     return parseInt(arr2.reduce((acc,num)=>(acc+num))/marks.length);
 }
 
-console.log(arr(marks));
+console.log(arr(marks)); 
