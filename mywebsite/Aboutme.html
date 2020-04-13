@@ -1,36 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title>About me</title>
+
 </head>
-<body>
-    <nav>
-    <ul class="navBar">
-            <li id="main"><a href="Aboutme.html">About me</a></li>
-            <li><a href="Whybootcamp.html">Why Bootcamp</a></li>
-            <li><a href="album.html">My album</a></li>
-    </ul>
+
+<body data-spy="scroll" data-target="#menu">
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+        <a href="#" class="navbar-brand">My Website</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#menu"><span
+                class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link active" href="#topCarousel">home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#intro">introduction</a></li>
+                <li class="nav-item"><a class="nav-link" href="#gallery"> album</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">contact me</a></li>
+            </ul>
+        </div>
     </nav>
-    <div class="group1">
-        <h1>Brief Introduction!</h1>
-        <p>My name is Edwin Chan.<br> In 2018, I graduated from University majored in Accounting and worked in audit industry for about two years. </p>
-        <img id="acctImg" src="./abountMe_images/Account.png">
-        <p>I also develop different hobbies in my spare time.</p>
-        <button onclick="picDisplayer()">Click Me !</button>
-        
-        <div id="gpPic"  style="display:none;">
-            <img  src="./abountMe_images/hiking.png" alt="hiking">
-            <div class="desc">I start hiking few months ago and hike almost every Sunday</div>
-            <img  src="./abountMe_images/japanese.png" alt="japanese" >
-            <div class="desc">I have studied Japanese for two years, entertainment purpose.  </div>
-            <img  src="./abountMe_images/taekwondo.png" alt="taekwondo" >
-            <div class="desc">One of my favourite sports.</div>
+
+    <div id="topCarousel" class="carousel slide" data-ride="carousel">
+
+        <ol class="carousel-indicators">
+            <li data-target="#topCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#topCarousel" data-slide-to="1"></li>
+            <li data-target="#topCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="carousel-caption text-center">
+                    <h1>Welcome to my website</h1>
+                    <button class="btn btn-outline-light btn-lg" href="#intro">About myself</button>
+                </div>
+                <img class="d-block w-100" src="home_images/XI53Qyr.jpg">
+            </div>
+            <div class="carousel-item"><img class="d-block w-100" src="home_images/thumb-1920-1042223.jpg"></div>
+            <div class="carousel-item"><img class="d-block w-100"
+                    src="home_images/3dbfad3deebc2081b010e51b90eb7a80.jpg"></div>
         </div>
     </div>
+    <div id="intro" class="jumbotron container-fluid text-center narrow offset">
+        <h1>Brief Introduction</h1>
+        <div class="heading-underline"></div>
+        <p>My name is Edwin Chan.<br> In 2018, I graduated from University, majored in Accounting and worked in audit
+            industry for two years. <br>I have different hobbies in my spare time.</p>
+        <div class="row no-padding">
+            <div class="portfolio col-sm-6 col-md-4">
+                <a href="home_images/4eecf29cc5d5ebb5a41e039abb4912b9.jpg" target="_blank"><img
+                        class="img-responsive resize" src="home_images/4eecf29cc5d5ebb5a41e039abb4912b9.jpg"></a>
+            </div>
+            <div class="portfolio col-sm-6 col-md-4">
+                <a href="home_images/661c52691444b73dc515336565391b89.jpg" target="_blank"><img class="img-responsive"
+                        src="home_images/661c52691444b73dc515336565391b89.jpg"></a>
+            </div>
+            <div class="portfolio col-sm-6 col-md-4">
+                <a href="home_images/tumblr_nbr8h6B7ZM1syv3zao5_1280.jpg" target="_blank"><img class="img-responsive"
+                        src="home_images/tumblr_nbr8h6B7ZM1syv3zao5_1280.jpg"></a>
+            </div>
+            <div class="portfolio col-sm-6 col-md-4">
+                <a href="home_images/e3704e18fd0e69b0d7a64f6d0921c98d.jpg" target="_blank"><img class="img-responsive"
+                        src="home_images/e3704e18fd0e69b0d7a64f6d0921c98d.jpg"></a>
+            </div>
+            <div class="portfolio col-sm-6 col-md-4">
+                <a href="home_images/3cf3499dd8fbdcdd6100c9a9c324bf44.jpg" target="_blank"><img class="img-responsive"
+                        src="home_images/3cf3499dd8fbdcdd6100c9a9c324bf44.jpg"></a>
+            </div>
+            <div class="portfolio col-sm-6 col-md-4">
+
+                <a href="" target="_blank"><img src=""></a>
+
+            </div>
+        </div>
+    </div>
+    <div id="gallery" class="gallery-block cards-gallery text-center justify-content-center offset">
+        <div class="heading">
+            <h1>hiking album</h2>
+                <div class="heading-underline"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-lg-4">
+                <div class="card border-0 transform-on-hover">
+                    <a class="lightbox" href=""><img class="card-img-top"
+                            src="./album_images/YuenTsuenAncientTrail.png"></a>
+                </div>
+                <div class="card-body">
+                    <h6>Yuen Tsuen Ancient Trail</h6>
+                    <p class="card-text text-muted">Running from Yuen Long to Tsuen Wan, was a major footpath used by
+                        villagers for transporting crops between Shap Pat Heung and Tsuen Wan.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card border-0 transform-on-hover">
+                    <a class="lightbox" href=""><img class="card-img-top"
+                            src="./album_images/WhatsApp Image 2020-04-12 at 1.52.57 PM.jpeg"></a>
+                </div>
+                <div class="card-body">
+                    <h6></h6>
+                    <p class="card-text text-muted"></p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card border-0 transform-on-hover">
+                    <a class="lightbox" href=""><img class="card-img-top"
+                            src="./album_images/TigerRoarRockRiver.png"></a>
+                </div>
+                <div class="card-body">
+                    <h6></h6>
+                    <p class="card-text text-muted"></p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card border-0 transform-on-hover">
+                    <a class="lightbox" href=""><img class="card-img-top"
+                            src="./album_images/Luk ChauStoneBushland.png"></a>
+                </div>
+                <div class="card-body">
+                    <h6></h6>
+                    <p class="card-text text-muted"></p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card border-0 transform-on-hover">
+                    <a class="lightbox" href=""><img class="card-img-top" src="./album_images/IMG_0047.jpg"></a>
+                </div>
+                <div class="card-body">
+                    <h6></h6>
+                    <p class="card-text text-muted"></p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card border-0 transform-on-hover">
+                    <a class="lightbox" href=""><img class="card-img-top" src="./album_images/IMG_0030.jpg"></a>
+                </div>
+                <div class="card-body">
+                    <h6></h6>
+                    <p class="card-text text-muted"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div id="contact" class="row justify-content-center text-center offset">
+            <div class="col-md-5">
+                <strong>CONTACT ME</strong>
+                <p>(+852)67583499<br>edwin9876@ymail.com</p>
+                <a href="" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="" target="_blank"><i class="fab fa-instagram-square"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/559742525b.js" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
 
 <script type="text/javascript" src="aboutme.js"></script>

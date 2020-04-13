@@ -1,97 +1,89 @@
-@import url('https://fonts.googleapis.com/css?family=Baloo+2&display=swap');
-
-*{
-    font-family: 'Baloo 2', cursive;
-    margin:0;
-    padding:0;
-}
-.navBar {
-    display:flex;
-    background-color: lightskyblue;
-    border-bottom:1px solid rgb(206, 203, 203);
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
+body{
+    font-family: 'Oswald', sans-serif;
 }
 
-nav li{
-    list-style-type: none;
-    padding:0px 20px 0px 20px ;
+h1{
+    text-transform: uppercase;
 }
 
-nav li:hover{
-    background-color: rgb(83, 182, 243);
+.offset:before{
+    height:4rem;
+    margin-top:-4em;
+    display:block;
+}
+.navbar{
+    text-transform:uppercase; 
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    background: #1d2530bb!important;
 }
 
-nav  #main{
-    color: ivory;
-    background-color: rgb(83, 182, 243);
+.navbar-dark .navbar-nav .nav-link.active,.navbar-dark .navbar-nav .nav-link:hover{
+    color:red !important;
 }
 
-nav a{
-    font-size: 1.2em;
-    text-decoration: none;
-    color:inherit;
+.navbar-dark .navbar-nav .nav-link {
+    color:white!important;
 }
 
-nav a:hover{
-    color: ivory;
+.carousel-item{
+    height:100vh;
 }
 
-.group1{
-    display: inline-block;
-    text-align: center;
-    width:100%;
-}
-.group1 img {
-    width: 300px;
-    height: 300px;
-}
-#acctImg{
-    width:600px;
-    height:200px;
-}
-
-.group2{
-    display:flex;
-    height:100%;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    border-style: dashed;
-    border-radius: 25px;
-    display:flex;
-}
-
-.group2 span{
-    padding:20px;
-}
-
-.questionFace{
-    margin:auto;
-}
-
-.questionFace img{
-    width:40%;
-}
-
-.questionFace img:hover{
-    transform: rotateY(180deg);
-}
-
-
-div.gallery {
-    margin: 5px;
-    border: 1px solid #cccccc;
-    width: 450px;
-    display:inline-block;  }
-  
-  div.gallery:hover {
-    border: 1px solid #777;
-  }
-  
-  div.gallery img {
-    width: 100%;
+.carousel-item img{
     height: 100%;
-  }
-  
-  div.desc {
-    padding: 15px;
-    text-align: center;
-  }
+    object-fit:cover;
+}
+.carousel-caption{
+    position: absolute;
+    top:50%;
+    text-transform:uppercase;
+
+}
+
+.narrow{
+    padding: 0!important;
+    margin:0!important;
+}
+
+.heading-underline{
+    width:3em;
+    height:.2rem;
+    background-color: rgb(87, 19, 19);
+    margin:0 auto 2rem;
+}
+
+.row{
+    margin-left: 0em !important;
+    margin-right: 0em !important;
+}
+
+.no-padding img{
+    height:300px;
+    width:100%;
+    object-fit:cover; 
+    transition:transform 0.5s ease;
+}
+
+.no-padding img:hover{
+    transform:scale(1.1);
+}
+.portfolio{
+    padding:0!important;
+    overflow:hidden;
+    cursor:zoom-in;
+}
+
+#contact a{
+    color:grey;
+}
+
+.gallery-block{
+    padding-top:3rem;
+}
+
+.card-img-top{   
+    height:35vh;
+    width:40vh;
+}
