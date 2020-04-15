@@ -59,21 +59,49 @@ h1{
     margin-right: 0em !important;
 }
 
+.layer{
+    background-color:rgb(0, 0, 0, 0.7);
+    right:10px;
+    bottom:10px;
+    position: absolute;
+    top:10px;
+    left:10px;
+    transform: scaleY(0);
+}
+
+.content{
+    position: absolute;
+    top:20%;
+    color: seashell;
+    text-align: center;
+    left:5%;
+    right:5%
+    }
+
+.no-padding .imgBox{
+    position: relative;
+    overflow:hidden;
+}
+
+.portfolio:hover .imgBox img{
+    transform:scale(1.1);
+    transition:transform 0.5s ease;
+}
+
 .no-padding img{
     height:300px;
     width:100%;
     object-fit:cover; 
-    transition:transform 0.5s ease;
 }
 
-.no-padding img:hover{
-    transform:scale(1.1);
+.portfolio:hover .layer{
+    transform: scaleY(1);
 }
+
 .portfolio{
     padding:0!important;
-    overflow:hidden;
-    cursor:zoom-in;
 }
+
 
 #contact a{
     color:grey;
