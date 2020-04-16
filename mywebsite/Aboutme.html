@@ -5,8 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+        integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    
+
     <title>About me</title>
 
 </head>
@@ -15,13 +20,15 @@
 
     <nav class="navbar navbar-expand-md navbar-dark fixed-top">
         <a href="#" class="navbar-brand">My Website</a>
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#menu"><span
-                class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse" id="menu">
-            <ul class="navbar-nav ml-auto">
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#menu">
+            <p class="navbar-toggler-icon"></p>
+        </button>
+        <div class="collapse navbar-collapse " id="menu">
+            <ul class="navbar-nav ml-auto ">
                 <li class="nav-item"><a class="nav-link active" href="#topCarousel">home</a></li>
                 <li class="nav-item"><a class="nav-link" href="#intro">introduction</a></li>
                 <li class="nav-item"><a class="nav-link" href="#gallery"> album</a></li>
+                <li class="nav-item"><a class="nav-link" href="#reason"> Bootcamp?</a></li>
                 <li class="nav-item"><a class="nav-link" href="#contact">contact me</a></li>
             </ul>
         </div>
@@ -38,16 +45,15 @@
             <div class="carousel-item active">
                 <div class="carousel-caption text-center">
                     <h1>Welcome to my website</h1>
-                    <button class="btn btn-outline-light btn-lg" href="#intro">About myself</button>
                 </div>
-                <img class="d-block w-100" src="home_images/XI53Qyr.jpg">
+                <img class=" d-block w-100" src="home_images/XI53Qyr.jpg">
             </div>
-            <div class="carousel-item"><img class="d-block w-100" src="home_images/thumb-1920-1042223.jpg"></div>
-            <div class="carousel-item"><img class="d-block w-100"
+            <div class="carousel-item"><img class=" d-block w-100" src="home_images/thumb-1920-1042223.jpg"></div>
+            <div class="carousel-item"><img class=" d-block w-100"
                     src="home_images/3dbfad3deebc2081b010e51b90eb7a80.jpg"></div>
         </div>
     </div>
-    <div id="intro" class="jumbotron container-fluid text-center narrow offset">
+    <div id="intro" class=" jumbotron gallery-block text-center offset">
         <h1>Brief Introduction</h1>
         <div class="heading-underline"></div>
         <p>My name is Edwin Chan.<br> In 2018, I graduated from University, majored in Accounting and worked in audit
@@ -75,7 +81,8 @@
                 <div class="layer">
                     <div class="content">
                         <h4>Animation - HunterXHunter</h4>
-                        <p>I am a Japanese animation fan. Learning Japanese language to understand characters dialogue. </p>
+                        <p>I am a Japanese animation fan. Learning Japanese language to understand their dialogue.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -113,20 +120,21 @@
                 <div class="layer">
                     <div class="content">
                         <h4>Hiking</h4>
-                        <p>I go hiking every weekend now, it becomes a popular public events!</p>
+                        <p>I go hiking every weekend now, under the epidemic it becomes a popular public events...?</p>
                     </div>
                 </div>
             </div>
             <div class="portfolio col-sm-6 col-md-4">
 
                 <div class="imgBox">
-                    <a href="" target="_blank"><img src=""></a>
+                    <a href=""  target="_blank"><img src="home_images/Screen Shot 2020-04-16 at 11.49.15 PM.png"></a>
 
                 </div>
                 <div class="layer">
                     <div class="content">
-                        <h4>LOL</h4>
-                        <p>this is my favourite online game.</p>
+                        <h4>Accounting</h4>
+                        <p>After I worked in the industry for 2 years, I find the work content very tedious and boring.
+                            So I decided to learn web develop. :)</p>
                     </div>
                 </div>
             </div>
@@ -134,13 +142,13 @@
     </div>
     <div id="gallery" class="gallery-block cards-gallery text-center justify-content-center offset">
         <div class="heading">
-            <h1>hiking album</h2>
-                <div class="heading-underline"></div>
+            <h1>hiking album</h1>
+            <div class="heading-underline"></div>
         </div>
-        <div class="row">
+        <div class="row" data-toggle=”modal” data-target=”#exampleModal”>
             <div class="col-md-6 col-lg-4">
                 <div class="card border-0 transform-on-hover">
-                    <a class="lightbox" href=""><img class="card-img-top"
+                    <a class="lightbox" href="./album_images/YuenTsuenAncientTrail.png" ><img class=" card-img-top"
                             src="./album_images/YuenTsuenAncientTrail.png"></a>
                 </div>
                 <div class="card-body">
@@ -151,17 +159,17 @@
             </div>
             <div class="col-md-6 col-lg-4">
                 <div class="card border-0 transform-on-hover">
-                    <a class="lightbox" href=""><img class="card-img-top"
-                            src="./album_images/WhatsApp Image 2020-04-12 at 1.52.57 PM.jpeg"></a>
+                    <a class="lightbox" href="./album_images/CastlePeak.png" ><img class=" card-img-top" src="./album_images/CastlePeak.png"></a>
                 </div>
                 <div class="card-body">
-                    <h6></h6>
-                    <p class="card-text text-muted"></p>
+                    <h6>Castle Peak</h6>
+                    <p class="card-text text-muted">A 583m high peak in the western New Territories of Hong Kong. It is
+                        known as one of the three sharp summits in Hong Kong.</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-4">
                 <div class="card border-0 transform-on-hover">
-                    <a class="lightbox" href=""><img class="card-img-top"
+                    <a class="lightbox" href="./album_images/TigerRoarRockRiver.png" ><img class=" card-img-top"
                             src="./album_images/TigerRoarRockRiver.png"></a>
                 </div>
                 <div class="card-body">
@@ -172,7 +180,7 @@
             </div>
             <div class="col-md-6 col-lg-4">
                 <div class="card border-0 transform-on-hover">
-                    <a class="lightbox" href=""><img class="card-img-top"
+                    <a class="lightbox" href="./album_images/Luk ChauStoneBushland.png" ><img class=" card-img-top"
                             src="./album_images/Luk ChauStoneBushland.png"></a>
                 </div>
                 <div class="card-body">
@@ -183,7 +191,7 @@
             </div>
             <div class="col-md-6 col-lg-4">
                 <div class="card border-0 transform-on-hover">
-                    <a class="lightbox" href=""><img class="card-img-top" src="./album_images/IMG_0047.jpg"></a>
+                    <a class="lightbox" href="./album_images/IMG_0047.jpg" ><img class=" card-img-top" src="./album_images/IMG_0047.jpg"></a>
                 </div>
                 <div class="card-body">
                     <h6>Cheung Tsui</h6>
@@ -193,7 +201,7 @@
             </div>
             <div class="col-md-6 col-lg-4">
                 <div class="card border-0 transform-on-hover">
-                    <a class="lightbox" href=""><img class="card-img-top"
+                    <a class="lightbox" href="./album_images/Screen Shot 2020-04-14 at 6.17.20 PM.png" ><img class=" card-img-top"
                             src="./album_images/Screen Shot 2020-04-14 at 6.17.20 PM.png"></a>
                 </div>
                 <div class="card-body">
@@ -208,21 +216,85 @@
             </div>
         </div>
     </div>
-    <footer>
-        <div id="contact" class="row justify-content-center text-center offset">
-            <div class="col-md-5">
-                <strong>CONTACT ME</strong>
-                <p>(+852)67583499<br>edwin9876@ymail.com</p>
-                <a href="" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="" target="_blank"><i class="fab fa-instagram-square"></i></a>
+
+    <div id="reason" class=" gallery-block testing row text-center justify-content-center">
+        <div class="heading">
+            <h1>Why choose bootcamp?</h1>
+            <div class="heading-underline"></div>
+        </div>
+        <div class="ball col-md-12">
+            <div class="content2">
+                <p>The bootcamp provide us essential skills to software engineering. </p>
+                <p>The demand for programmers continues to increase. It has good career prospect.</p>
+                <p>The ability to code gives me more career choices. E.g. Freelance programmer!</p>
+                <p>Intensely training logical and arithmetic operation skills! Be a rational man!</p>
+                <p>Give me a low-time-expense way transforming to another professional field. </p>
+            </div>
+        </div>
+        <div id="bigStar">
+            <i class="fas fa-star"></i>
+        </div>
+        <div class="imgGp">
+            <i class="col-md-2  fas fa-child fa-3x faa-pulse animated"></i>
+            <i class="col-md-2  fas fa-child fa-3x faa-pulse animated"></i>
+            <img id="pxMan" src="home_images/Screen Shot 2020-04-16 at 1.55.52 PM.png">
+            <i class="col-md-2  fas fa-child fa-3x faa-pulse animated"></i>
+            <i class="col-md-2  fas fa-child fa-3x faa-pulse animated"></i>
+        </div>
+    </div>
+
+    <footer class="offset">
+        <div id="contact" class="row text-center ">
+            <div class="col-md-12 narrow">
+                <form id='form'>
+                    <div class="remove">
+                        <h1>CONTACT ME</h1>
+                        <div class="field">
+                            <label class="space" for="fname">First Name:</label>
+                            <input name="fname" placeholder="First name"><br>
+                        </div>
+                        <div class="field">
+                            <label class="space" for="lname">Last Name:</label>
+                            <input name="lname" placeholder="Last name"><br>
+
+                        </div>
+                        <label class="space" for="gender">Gender:</label>
+                        <div class="field2">
+                            <div class="field3">
+                                <input type="radio" id="male" name="gender" value="male">
+                                <label for="male">Male</label>
+                            </div>
+                            <div class="field3">
+                                <input type="radio" id="female" name="gender" value="female">
+                                <label for="female">Female</label><br>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="space" for="eMail">e-Mail Adress:</label>
+                            <input name="eMail" placeholder="e-Mail"><br>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="message">Leave your messages to me:</label><br>
+                        <textarea name="message" rows="10" cols="40"></textarea><br>
+                    </div>
+                    <input type="submit" value="Submit">
+                </form>
+                <div class="underCons">
+                    <img src="home_images/54150.jpg">
+                </div>
+                <div id="myContact">
+                    <p>(+852)67583499<br>edwin9876@ymail.com</p>
+                    <a href=""  target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href=""  target="_blank"><i class="fab fa-instagram-square"></i></a>
+                </div>
             </div>
         </div>
     </footer>
-    <script src="https://kit.fontawesome.com/559742525b.js" crossorigin="anonymous"></script>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
         crossorigin="anonymous"></script>

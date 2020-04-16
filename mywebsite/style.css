@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
+html{
+    scroll-behavior: smooth;
+
+}
 body{
     font-family: 'Oswald', sans-serif;
-}
 
+}
 h1{
     text-transform: uppercase;
 }
@@ -43,10 +47,15 @@ h1{
 }
 
 .narrow{
-    padding: 0!important;
+    padding:3px 0 0 0!important;
     margin:0!important;
 }
 
+#intro{
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+}
 .heading-underline{
     width:3em;
     height:.2rem;
@@ -55,8 +64,8 @@ h1{
 }
 
 .row{
-    margin-left: 0em !important;
-    margin-right: 0em !important;
+    margin-left: 0!important;
+    margin-right: 0!important;
 }
 
 .layer{
@@ -67,6 +76,8 @@ h1{
     top:10px;
     left:10px;
     transform: scaleY(0);
+    transition:transform 0.5s ease;
+
 }
 
 .content{
@@ -102,11 +113,13 @@ h1{
     padding:0!important;
 }
 
-
 #contact a{
     color:grey;
 }
 
+#gallery{
+    background-color: rgb(199, 235, 247);
+}
 .gallery-block{
     padding-top:3rem;
 }
@@ -114,4 +127,90 @@ h1{
 .card-img-top{   
     height:35vh;
     width:40vh;
+}
+.card-text{
+    text-align: justify;
+}
+
+#contact .field{
+    margin:1em auto;
+}
+
+#contact .field2{
+    display: inline-block;
+}
+#form{
+    padding-top: 3rem;
+    padding-bottom: 4em;
+    background-color: rgb(255, 255, 218);
+}
+
+.space{
+  margin-right: 150px;
+}
+
+.field input {
+    width: 50vw;
+}
+.field2{
+    width: 50vw;
+}
+.field3{
+    display: inline-block;
+    padding:0 20px;
+}
+
+
+label[for="eMail"]{
+    margin-right: 131px ;
+}
+
+#myContact{
+    margin-top: 2em;
+}
+
+.testing{
+    height:900px;
+    width:100%;
+}
+
+.testing h2{
+    text-transform:uppercase ;
+}
+.ball{
+    background-image:url('/home_images/2-21779_pixel-art-space-background-8-bit-black-background.jpg') ;
+    border: rgb(247, 111, 57) solid;
+    opacity:0;
+}
+
+#pxMan{
+ opacity:0;
+}
+
+.content2{
+    padding:20px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.imgGp{
+    width:100%
+}
+.imgGp i{
+    opacity:0;    
+}
+
+.underCons img{
+    width:80%;
+    display:none;
+}
+
+#reason {
+    position: relative;
+}
+#bigStar{
+    position: absolute;
+    top:120px;
+    font-size: 200px;
+    color: rgb(253, 201, 69);
 }
