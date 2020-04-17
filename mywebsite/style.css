@@ -43,7 +43,6 @@ h1{
     position: absolute;
     top:50%;
     text-transform:uppercase;
-
 }
 
 .narrow{
@@ -178,7 +177,7 @@ label[for="eMail"]{
     text-transform:uppercase ;
 }
 .ball{
-    background-image:url('/home_images/2-21779_pixel-art-space-background-8-bit-black-background.jpg') ;
+    background-image:url('./home_images/2-21779_pixel-art-space-background-8-bit-black-background.jpg') ;
     border: rgb(247, 111, 57) solid;
     opacity:0;
 }
