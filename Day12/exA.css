@@ -1,0 +1,13 @@
+.bigSq div {
+    width:100px;
+    height: 100px;
+    display: inline-block;
+    background-color: white;
+}
+
+.bigSq{
+    width:308px;
+    height: 308px;
+    background-color: grey;
+}
+
