@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Very Simple File Upload</h1>
+    <p>Select one document and upload it</p>
+    <form action="/upload" method="post" enctype="multipart/form-data" onsubmit="alert1()">
+        <input type="file" name="fileU" id="fileU" onchange="addFile()"><br>
+        <input type="submit">
+    </form>
+
+    <div id="fileLog">
+    </div>
+    <script type="text/javascript">
+        let count = 0;
+
+        function addFile() {
+            let fileLocation = document.getElementById("fileU").value.slice(12)
+            let para = document.createElement('p')
+            let fileL = document.getElementById('fileLog')
+            if (count == 0) {
+                append()
+                count += 1
+            } else if (count > 0) {
+                fileL.firstElementChild.remove()
+                append()
+            }
+            function append() {
+                para.innerHTML = fileLocation + "<p>If you want to download your file, add this to your url:<br> /upload/the file name<p>"
+                fileL.appendChild(para)
+            }
+
+        }
+
+        function alert1() {
+            if (document.getElementById("fileU").value!="") {
+                alert('Submit success');
+
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

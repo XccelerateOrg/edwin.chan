@@ -1,0 +1,14 @@
+{
+  "name": "exa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "exA.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^26.0.1"
+  }
+}
