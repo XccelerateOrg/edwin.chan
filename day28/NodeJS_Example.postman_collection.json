@@ -1,0 +1,46 @@
+{
+	"info": {
+		"_postman_id": "7d5a6c73-6fab-4be0-bf28-d2a100815de3",
+		"name": "NodeJS_Example",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get_Groups",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/groups\n",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"groups\n"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get_Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/users",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

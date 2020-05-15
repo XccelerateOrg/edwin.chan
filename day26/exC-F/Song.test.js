@@ -24,6 +24,7 @@ expect.extend({
 })})
 
 describe("Let's text the properties and method!",()=>{
+    
     let song = new Class.Song('Bohemian Rhapsody','A Night at the Opera','Mercury')
     let anothersong = new Class.Song('Seaside Rendezvous','A Night at the Opera','Mercury')
 

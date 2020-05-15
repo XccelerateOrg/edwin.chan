@@ -1,0 +1,15 @@
+{
+  "name": "ex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Jedi.test.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
+}
