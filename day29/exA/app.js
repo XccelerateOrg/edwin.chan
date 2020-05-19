@@ -1,23 +1,40 @@
 let express = require('express')
 let app = express()
 let hbs = require('express-handlebars')
+let fs = require("fs")
+let basicAuth = require('express-basic-auth')
 
 const menu = {
-    food :[
+    food: [
         {
-            'menu':'1','pizza': 'Neapolitan Pizza','drinks':'beer','desserts':'Maltesers tiramisu','sideDishes':'fries'
+            'menu': '1', 'pizza': 'Neapolitan Pizza', 'drinks': 'beer', 'desserts': 'Maltesers tiramisu', 'sideDishes': 'fries'
         },
         {
-            'menu':'2','pizza': 'Chicago Pizza','drinks':'coke','desserts':'mango fool','sideDishes':'creamed spinach'
+            'menu': '2', 'pizza': 'Chicago Pizza', 'drinks': 'coke', 'desserts': 'mango fool', 'sideDishes': 'creamed spinach'
         },
         {
-            'menu':'3','pizza': 'New York- Style Pizza','drinks':'juice','desserts':'apple tart','sideDishes':'Green Bean Casserole Bundles'
+            'menu': '3', 'pizza': 'New York- Style Pizza', 'drinks': 'juice', 'desserts': 'apple tart', 'sideDishes': 'Green Bean Casserole Bundles'
         },
         {
-            'menu':'4','pizza': 'Sicilian Pizza','drinks':'hard soda','desserts':'pudding','sideDishes':'Cauliflower Tots'
+            'menu': '4', 'pizza': 'Sicilian Pizza', 'drinks': 'hard soda', 'desserts': 'pudding', 'sideDishes': 'Cauliflower Tots'
         }
     ]
 }
+app.use(basicAuth({
+
+    users: {
+        'admin': 'supersecret',
+        'adam': 'password1234',
+        'eve': 'asdfghjkl',
+    },
+
+    challenge: true,
+
+
+    realm: 'My Application'
+
+}));
+
 
 app.use(express.static(__dirname + "/public"))
 
@@ -29,7 +46,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/menu', (req, res) => {
-    res.render('menu',menu)
+    res.render('menu', menu)
 })
 
 app.get('/gallery', (req, res) => {

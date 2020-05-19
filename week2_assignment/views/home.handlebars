@@ -1,8 +1,10 @@
-{{#each user}}
-<div class="col-md-6">
-<div class="panel panel-default">
-  <div class="panel-body">{{@index}}</div>
+{{#each text}}
+<div  id="{{ @index }}" class=" notes col-md-6">
+<div  class="  panel panel-default">
+  <div class="note panel-body"><textarea>{{this}}</textarea>  <button type="button"  class="remove btn btn-sm btn-danger">X</button>
 </div>
-<div class="notes"></div>
+
 </div>
+</div>
+
 {{/each}}
