@@ -1,0 +1,31 @@
+.container{
+    display: flex;
+}
+
+.user_info{
+    align-self:center;
+    padding:10px;
+}
+.chatArea{
+    height:400px;
+    border-radius: 3px;
+    border:2px solid brown;
+    background-color: aquamarine;    
+    box-sizing: border-box;
+    padding:20px;
+    overflow: scroll;
+    flex-grow: 8;
+}
+
+#chatForm input[type=text]{
+    width:90%;
+    padding:10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.message{
+    background-color: cornsilk;
+    margin-bottom: 2px;
+}

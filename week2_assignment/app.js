@@ -1,7 +1,7 @@
 let express = require("express")
 let app = express()
 
-let basicAuth = require('./basic_auth')
+let BasicAuth = require('./basic_auth')
 
 let bodyParser = require("body-parser")
 let jsonParser = bodyParser.json()
@@ -15,7 +15,8 @@ app.set("view engine", "handlebars")
 
 let {read,write} = require('./noteservice')
 
-app.use(basicAuth)
+app.use(BasicAuth)
+
 app.use(jsonParser)
 app.use(urlencodedParser)
 
@@ -41,6 +42,7 @@ app.post('/', jsonParser, (req, res) => {
     let user = new USERNOTE(req.auth.user)
     read(fileL,user)
         .then(notes => {
+            console.log(req.body.text)
             notes[req.auth.user].push(req.body.text)
             write(fileL, notes)
             .then(notes => {

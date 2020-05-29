@@ -2,6 +2,7 @@ let fs = require('fs')
 
 let notes = new Object()
 
+
 let read = function (fileL,user) {
     return new Promise((resolve, reject) => {
         fs.readFile(fileL,'utf8', (err, data) => {
@@ -28,6 +29,7 @@ let write = function (fileL, notes) {
             if (err) {
                 return reject(err);
             }
+            console.log(notes)
             resolve(notes);
         });
     })
