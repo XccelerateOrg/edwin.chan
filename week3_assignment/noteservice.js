@@ -1,7 +1,6 @@
 let fs = require('fs')
 const config = require('./knexfile')['development']
 const knex = require('knex')(config)
-let notes = new Object()
 
 
 let read = async function (user) {
@@ -24,10 +23,10 @@ let read = async function (user) {
     // })
     try {
         // console.log(user)
-        let userArray = await knex('data').select('text_data').join('users', 'data.user_id', 'users.id').where('users.name', user).orderBy('data.id')
-        let userData = userArray.map(obj => obj.text_data)
-        notes[user] = userData
-        return notes
+        let userArray = await knex('data').select('text_data','data.id').join('users', 'data.user_id', 'users.id').where('users.name', user).orderBy('data.id')
+        console.log(userArray)
+
+        return userArray
     }
     catch (err) {
         console.log(err)
@@ -48,44 +47,34 @@ let write = async function (user, text) {
         const subquery = knex('users').select('id').where('name', user)
         await knex('data').insert({ 'user_id': subquery, 'text_data': text }).whereIn('data.user_id', subquery)
         let userArray = await knex('data').select('text_data').innerJoin('users', 'data.user_id', 'users.id').where('name', user).orderBy('data.id')
-        let userData = userArray.map(obj => obj.text_data)
-        notes[user] = userData
         // console.log(notes)
-        return notes
+        return userArray
     }
     catch (err) {
         console.log(err)
     }
 }
 
-let update = async function (user,id,text) {
+let update = async function (user,textId,text) {
     // let userArray = await knex('data').select('text_data').innerJoin('users', 'data.user_id', 'users.id').where('name', user).orderBy('data.id')
     // let userData = userArray.map(obj => obj.text_data)
     // notes[user] = userData
     // console.log(notes)
     // const subquery = knex('users').select('id').where('name', user)
-    console.log(id)
-    let c2 = await knex('data').count('* as cnt').innerJoin('users','data.user_id', 'users.id').where('users.name',user)
-    console.log(c2)
-    await knex('data').update('text_data',text).from(c2).where('c2.rn',id)
+    console.log(textId)
+    await knex('data').update('text_data',text).where('id',textId)
     let userArray = await knex('data').select('text_data').innerJoin('users', 'data.user_id', 'users.id').where('name', user).orderBy('data.id')
-    let userData = userArray.map(obj => obj.text_data)
-    notes[user] = userData
-    console.log(notes)
-    return notes
+    return userArray
 
 }
 
-let remove = async function (user,id) {
-    console.log(id)
+let remove = async function (user,textId) {
+    console.log(textId)
     console.log(user)
-    await knex('data').innerJoin('users','data.user_id','users.id').where('data.id',id).del()
+    await knex('data').where('data.id',textId).del()
 
-    return id-1
+    return textId
 }
 
-// remove(5)
-// update('123',1,'realsuck')
-// write('me','hahahah')
 
 module.exports = { read, write, update,remove }

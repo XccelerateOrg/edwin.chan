@@ -8,6 +8,7 @@ $('.notes').submit((e)=>{
     axios.post('/',val)
     .then((res)=>{
         console.log(res.data)
+        console.log('1111')
     })
     .catch((error) => { console.error(error) })
 })
@@ -15,7 +16,7 @@ $('.notes').submit((e)=>{
 $('.notes .remove').on('click',(event)=>{
     console.log($(event.target).closest(".notes").attr('id'));
     axios
-    .delete('/',{data:{index:$(event.target).closest(".notes").attr('id')}})
+    .delete('/',{data:{id:$(event.target).closest(".notes").attr('id')}})
     .then((res)=>{
         $(`#${res.data}`).remove()
     })
@@ -25,7 +26,7 @@ $('.note textarea').on('blur',(event)=>{
     console.log($(event.target).closest(".notes").attr('id'));
     console.log($(event.currentTarget).val());
     axios
-    .put('/',{data:{index:$(event.target).closest(".notes").attr('id'),value:$(event.currentTarget).val()}})
+    .put('/',{data:{id:$(event.target).closest(".notes").attr('id'),value:$(event.currentTarget).val()}})
     .then((res)=>{
        console.log(res.data)
     })
