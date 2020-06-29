@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "bootstrap": "^4.5.0",
+    "reactstrap": "^8.5.1"
+  }
+}
