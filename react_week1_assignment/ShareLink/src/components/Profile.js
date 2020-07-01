@@ -1,10 +1,10 @@
 import React from 'react'
-import AddLink from './AddLink';
 
-import { Card, CardHeader, CardTitle, CardBody, CardText, Button, CardImg } from 'reactstrap';
+import { Card, CardTitle, CardBody, CardText, Button, CardImg } from 'reactstrap';
 
 
 export default class Profile extends React.Component {
+    // eslint-disable-next-line
     constructor(props){
         super(props)
     }
