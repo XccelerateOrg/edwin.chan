@@ -15,6 +15,7 @@ export const linksReducer = (state = initalState, action) => {
           linksReducer: []
         };
       case REMOVE_LINK_ACTION:
+        console.log(action)
         return{
           linksReducer: [...state.linksReducer.slice(0,action.index),
             ...state.linksReducer.slice(action.index+1)]

@@ -1,19 +1,21 @@
 import * as React from "react";
-import { createStore } from "redux";
+import { createStore,applyMiddleware } from "redux";
+import logger from 'redux-logger'
 // import { render } from "react-dom";
 import { Provider, connect } from "react-redux";
 
 //Define ADD_LINK and CLEAR_LINK as action creators
 import { addLinkActionCreator,clearLinkActionCreator,removeLinkActionCreator} from './actions/Link' 
 
-import {linksReducer} from './reducers/linkReducer'
+import {linksReducer,initalState} from './reducers/linkReducer'
 
 
-const rootReducer = () => {
-    return linksReducer()
+
+const rootReducer = (state = initalState, action) => {
+    return linksReducer(state,action)
 }
 
-const store = createStore(rootReducer);
+const store = createStore(rootReducer,applyMiddleware(logger));
 
 const PureLinkList = props => {
   return (
@@ -41,9 +43,9 @@ const mapStateToProp = state => {
 // Add the `mapDispatchToProp` so functions can update the redux store.
 const mapDispatchToProp = (dispatch) => {
   return {
-      addLinkMDP:dispatch(addLinkActionCreator('Xccelerate','https://xccelerate.co/')),
-      clearLinkMDP:dispatch(clearLinkActionCreator()),
-      removeLinkMDP:dispatch(removeLinkActionCreator())
+      addLinkMDP:()=> dispatch(addLinkActionCreator('Xccelerate','https://xccelerate.co/')),
+      clearLinkMDP:()=>dispatch(clearLinkActionCreator()),
+      removeLinkMDP:(i)=>dispatch(removeLinkActionCreator(i))
   }   
 };
 

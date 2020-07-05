@@ -19,6 +19,7 @@ export const clearLinkActionCreator = () => {
 }
 
 export const removeLinkActionCreator = (i) => {
+    console.log(i)
     return {
         index: i,
         type: REMOVE_LINK_ACTION
